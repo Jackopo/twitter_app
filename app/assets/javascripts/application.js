@@ -15,3 +15,14 @@
 //= require twitter/bootstrap
 //= require turbolinks
 //= require_tree .
+
+setInterval(function updateTweets() {
+
+	$.ajax({
+	  url: "/",
+	  cache: false
+	}).done(function( html ) {
+	  $("#tweets-list").prepend($(html).find(".single-tweet"));
+	  //alert("updating!")
+	});
+}, 10000);

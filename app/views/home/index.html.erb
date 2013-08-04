@@ -1,9 +1,9 @@
-<h1>Home#index</h1>
+<h1>The Diocanes</h1>
 
 <div id="tweets">
-<% @tweets.each do |tweet| %>
 	<ul id="tweets-list">
-		<li class="single-tweet"><%= tweet.user.screen_name%>: <%= tweet.text %></li>
-	</ul>	
+<% @tweets && @tweets.each do |tweet| %>
+		<li class="single-tweet"><%= tweet.html_safe %></li>
 <% end %>
+	</ul>	
 </div>
