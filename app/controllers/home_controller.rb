@@ -2,8 +2,7 @@ class HomeController < ApplicationController
   
 
   def index
-  	@tweets = Twitter.search("un commento dagli states")
-
+  	@tweets = Twitter.search("#diocane").results
   	return @tweets
   end
 end

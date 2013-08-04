@@ -1,9 +1,9 @@
 <h1>Home#index</h1>
 
 <div id="tweets">
-<% @tweets.statuses.each do |tweet| %>
-
-	<%= @tweet.text %>
-
+<% @tweets.each do |tweet| %>
+	<ul id="tweets-list">
+		<li class="single-tweet"><%= tweet.user.screen_name%>: <%= tweet.text %></li>
+	</ul>	
 <% end %>
 </div>
