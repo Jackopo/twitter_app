@@ -16,13 +16,29 @@
 //= require turbolinks
 //= require_tree .
 
-setInterval(function updateTweets() {
+setInterval(
+function updateTweets() {
 
 	$.ajax({
 	  url: "/",
 	  cache: false
-	}).done(function( html ) {
-	  $("#tweets-list").prepend($(html).find(".single-tweet"));
-	  //alert("updating!")
+	}).done(function( response, status, xhr) {
+		console.log(response)
+		console.log(status)
+		console.log(xhr)
+
+		
+		if ($(response).find("#tweets-list").children().size() > 0) {
+			
+			console.log("new tweets " + $(response).find("#tweets-list").children().size())
+			
+	     	$("#tweets-list").replaceWith($(response).find("#tweets-list"));
+			
+ 		} else {
+			console.log("nothing to display")
+
+ 		} 	   
 	});
-}, 10000);
+	//alert("updating!")
+}
+, 30000);
