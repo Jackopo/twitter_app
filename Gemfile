@@ -30,6 +30,9 @@ gem 'jbuilder', '~> 1.2'
 # Twitter gem
 gem 'twitter'
 
+# TwitterStream gem
+gem 'tweetstream'
+
 # Twitter Bootstrap gem
 gem 'twitter-bootstrap-rails'
 
