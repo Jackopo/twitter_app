@@ -16,7 +16,7 @@
 //= require turbolinks
 //= require_tree .
 
-setInterval(
+
 function updateTweets() {
 
 	$.ajax({
@@ -40,5 +40,4 @@ function updateTweets() {
  		} 	   
 	});
 	//alert("updating!")
-}
-, 30000);
+};

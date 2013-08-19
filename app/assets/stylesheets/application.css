@@ -15,3 +15,8 @@
 #tweets-list {
 	list-style-type: none;
 }
+
+.container-fluid {
+	margin: 0 auto;
+	width: 550px;
+}
