@@ -1,5 +1,11 @@
 <h1>The Diocanes</h1>
 
+<%= form_tag("/", method: "get") do %>
+  <%= label_tag(:q, "Search for:") %>
+  <%= text_field_tag(:q, params[:q]) %>
+  <%= submit_tag("Search") %>
+<% end %>
+
 <div id="tweets">
 	<ul id="tweets-list">
 		<% if @tweets %>
@@ -8,5 +14,5 @@
 			<% end %>
 		<% end %>
 
-	</ul>	
+	</ul>
 </div>
