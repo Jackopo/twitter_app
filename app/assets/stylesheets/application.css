@@ -11,13 +11,3 @@
  *= require_self
  *= require_tree .
  */
-
-#tweets-list {
-	list-style-type: none;
-	padding: 0;
-}
-
-.container-fluid {
-	margin: 0 auto;
-	width: 550px;
-}

@@ -1,3 +1,13 @@
 // Place all the styles related to the Home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#tweets-list {
+	list-style-type: none;
+	padding: 0;
+}
+
+.container-fluid {
+	margin: 0 auto;
+	width: 550px;
+}
