@@ -8,6 +8,6 @@ class HomeController < ApplicationController
   private
 
   def search_params
-    params.permit(:q)
+    params.permit(:q, :commit, :utf8)
   end
 end
