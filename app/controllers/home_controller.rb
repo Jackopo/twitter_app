@@ -1,6 +1,5 @@
 class HomeController < ApplicationController
 
-
   def index
     client = TwitterClient.new
     @tweets = client.perform_search(search_params[:q],search_params[:last_tweet_id]) if params[:q].present?

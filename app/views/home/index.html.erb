@@ -1,12 +1,3 @@
-<h1>The Diocanes</h1>
-
-<%= form_tag("/", method: "get", class:"search") do %>
-  <%= label_tag(:q, "Search for:") %>
-  <%= text_field_tag(:q, params[:q]) %>
-  <%= hidden_field_tag(:last_tweet_id, @last_tweet_id) %>
-  <%= submit_tag("Search") %>
-<% end %>
-
 <div id="tweets">
 	<ul id="tweets-list">
 		<% if @tweets %>
