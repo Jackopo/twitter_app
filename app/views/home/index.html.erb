@@ -1,8 +1,9 @@
 <h1>The Diocanes</h1>
 
-<%= form_tag("/", method: "get") do %>
+<%= form_tag("/", method: "get", class:"search") do %>
   <%= label_tag(:q, "Search for:") %>
   <%= text_field_tag(:q, params[:q]) %>
+  <%= hidden_field_tag(:last_tweet_id, @last_tweet_id) %>
   <%= submit_tag("Search") %>
 <% end %>
 
@@ -15,4 +16,7 @@
 		<% end %>
 
 	</ul>
+  <p id="loading">
+	   <img src="assets/default.svg" alt="Loading…" />
+  </p>
 </div>
