@@ -13,9 +13,7 @@ class MapPageController < ApplicationController
       client = TwitterClient.new
       if params[:list_query].present?
         client.streaming(params[:list_query].join(', ')) do |tweet|
-          # binding.pry
           tweet = client.oembed(tweet.id).html if tweet.is_a?(Twitter::Tweet)
-          # render partials: "map_page/stream_tweets", status: 200
           sse.write ({ :tweets => tweet })
         end
       end

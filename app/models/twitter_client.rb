@@ -54,7 +54,6 @@ class TwitterClient
       }
       streaming_client.filter(options, &block)
     rescue Twitter::Error::TooManyRequests => error
-      binding.pry
       sleep error.rate_limit.reset_in.to_i + 1
       retry
     rescue => error
