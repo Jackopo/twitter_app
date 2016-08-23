@@ -14,6 +14,10 @@ TwitterApp::Application.routes.draw do
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
+  resources :map_page
+
+  get '/map_page/stream_tweets' => 'map_page#stream_tweets'
+
 
   # Example resource route with options:
   #   resources :products do

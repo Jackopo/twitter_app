@@ -1,0 +1,9 @@
+<div id="tweets">
+	<ul id="tweets-list">
+    <% if @tweets %>
+      <% @tweets.each do |tweet| %>
+        <li class="single-tweet"><%= tweet.html_safe %></li>
+      <% end %>
+    <% end %>
+  </ul>
+</div>
