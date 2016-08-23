@@ -47,7 +47,8 @@ group :development, :test do
   gem 'dotenv-rails'
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3'
-
+  gem 'rspec', '~> 3.5'
+  gem 'rspec-rails', '~> 3.5'
 end
 
 group :production do
@@ -57,11 +58,4 @@ end
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
-# Use unicorn as the app server
-# gem 'unicorn'
-
-# Use Capistrano for deployment
-# gem 'capistrano', group: :development
-
-# Use debugger
-# gem 'debugger', group: [:development, :test]
+gem "puma"
