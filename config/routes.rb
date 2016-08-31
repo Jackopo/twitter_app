@@ -8,16 +8,14 @@ TwitterApp::Application.routes.draw do
   root 'home#index'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
-  get '/load_tweets' => 'home#load_tweets'
+  get 'load_tweets' => 'home#load_tweets'
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
-  resources :map_page
-
-  get '/map_page/stream_tweets' => 'map_page#stream_tweets'
-
+  get 'map_page' => 'map_page#index'
+  get 'map_page/stream_tweets' => 'map_page#stream_tweets'
 
   # Example resource route with options:
   #   resources :products do
